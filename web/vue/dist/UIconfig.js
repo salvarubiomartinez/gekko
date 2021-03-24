@@ -5,7 +5,7 @@
 // see https://gekko.wizb.it/docs/installation/installing_gekko_on_a_server.html#Configuring-Gekko
 
 const CONFIG = {
-  headless: false,
+  headless: true,
   api: {
     host: '127.0.0.1',
     port: 3000,
@@ -17,7 +17,18 @@ const CONFIG = {
     port: 3000,
     path: '/'
   },
-  adapter: 'sqlite'
+  adapter: 'postgresql',
+ // postgresql = {
+ //   path: 'plugins/postgresql',
+ //   version: 0.1,
+ //   connectionString: 'postgres://gekkodbuser:1234@localhost:5432', // if default port
+ //   database: null, // if set, we'll put all tables into a single database.
+ //   schema: 'public',
+ //   dependencies: [{
+ //     module: 'pg',
+ //     version: '7.4.3'
+ // }]
+// }
 }
 
 if(typeof window === 'undefined')
